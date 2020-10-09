@@ -22,10 +22,23 @@ public class Main {
     // create an array
     int[] cards = new int[NUMB_CARDS];
 
+    // create count variable
+    int count = 0;
+
     // put values into the array using a loop
     for(int i = 0; i < NUMB_CARDS; i++){
       cards[i]= input.nextInt();
     }
     
+    // checks values to see if a one should be added or subtracted
+    for(int i = 0; i < NUMB_CARDS; i++){
+      if(cards[i] >= 2 && cards[i] <= 6){
+        count++;
+      } else if(cards[i] >= 10 && cards[i] <= 14){
+        count--;
+      } 
+    }
+    // tell the user the count
+    System.out.println("The count would be " + count);
   }
 }
